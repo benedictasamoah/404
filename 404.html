@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#40babd" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/dist/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/dist/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/dist/icons/manifest.json">
+    <link rel="mask-icon" href="/dist/icons/safari-pinned-tab.svg" color="#4f8282">
+    <link rel="shortcut icon" href="/dist/icons/favicon.ico">
+    <meta name="msapplication-config" content="/dist/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Status | Ventsell</title>
+    <link href="/404/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+                <h1>Server Issues</h1>
+                <h3>Hello sorry for the incovenience</h3>
+                <p class="text-muted">We are having problems with our servers in USA</p>
+                <p class="text-muted m-t-30 m-b-30">Our engineering team is working hard to resolve it<br/> Please return in the next 30 minutes thanks. <span id="count">...</span></p>
+                <br/>
+                <p>
+                <a href="/" class="btn-404">Back to home</a></p> 
+            <footer class="footer text-center">2016 - 2017.</footer>
+
+    </section>
+<script type="text/javascript">
+function Countdown(options) {
+  var timer,
+  instance = this,
+  seconds = options.seconds || 10,
+  updateStatus = options.onUpdateStatus || function () {},
+  counterEnd = options.onCounterEnd || function () {};
+
+  function decrementCounter() {
+    updateStatus(seconds);
+    if (seconds === 0) {
+      counterEnd();
+      instance.stop();
+    }
+    seconds--;
+  }
+
+  this.start = function () {
+    clearInterval(timer);
+    timer = 0;
+    seconds = options.seconds;
+    timer = setInterval(decrementCounter, 1000);
+  };
+
+  this.stop = function () {
+    clearInterval(timer);
+  };
+}
+
+var myCounter = new Countdown({  
+    seconds:1800, 
+    onUpdateStatus: function(sec){document.getElementById("count").innerHTML=sec + " seconds";},
+    onCounterEnd: function(){ window.location = '/';} 
+});
+
+myCounter.start();
+
+
+
+</script>
+</body>
+
+</html>

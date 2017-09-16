@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,300,700');
+@keyframes animatedBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0;
+            }
+        }
+body{
+    font-family: 'Nunito', sans-serif !important;
+    text-align: center !important;
+    color: #40babd !important;
+    background-color: #fff;
+    background-image: url('404.png');
+    animation: animatedBackground 40s linear infinite !important;
+}
+h1 {
+    margin-top: 30px;
+    font-size: 10em;
+    font-weight: 900;
+    text-align: center;
+}
+h3 {
+    margin-top: -140px;
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center;
+}
+.text-muted{
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+}
+footer{
+    position: relative;
+    text-align: center;
+    font-size: .8em;
+    margin-top: 40px;
+}
+.btn-404{
+    position: relative;
+    width: 100px;
+    background:#40babd;
+    border-radius: 3px;
+    border: solid 1px #40babd;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
